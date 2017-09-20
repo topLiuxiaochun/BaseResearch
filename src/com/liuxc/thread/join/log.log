@@ -1,0 +1,21 @@
+
+运行RunClient控制台打印结果
+
+输出情形一：
+Thread-1:ThreadA start
+Thread-1:ThreadA end
+main end
+Thread-0:ThreadB start
+Thread-0:ThreadB end
+
+输出情形二：
+Thread-0:ThreadB start
+Thread-0:ThreadB end
+main end
+Thread-1:ThreadA start
+Thread-1:ThreadA end
+
+输出情形三：
+
+
+输出情形四：
