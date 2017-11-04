@@ -1,13 +1,13 @@
 package com.liuxc.jms.client;
 
-import com.liuxc.jms.Producter;
+import com.liuxc.jms.Producer;
 
-public class ProducterClient {
+public class ProducerClient {
 
 	public static void main(String[] args) {
-		Producter producter = new Producter();
+		Producer producter = new Producer();
 		producter.init();
-		ProducterClient client = new ProducterClient();
+		ProducerClient client = new ProducerClient();
 		
 		try {
 			Thread.sleep(1000);
@@ -25,17 +25,17 @@ public class ProducterClient {
 
 	private class ProducterThread implements Runnable {
 		
-		private Producter producter;
+		private Producer producer;
 		
-		public ProducterThread(Producter producter) {
-			this.producter = producter;
+		public ProducterThread(Producer producter) {
+			this.producer = producter;
 		}
 
 		@Override
 		public void run() {
 			while(true) {
 				try {
-					producter.sendMessage("active-mq");
+					producer.sendMessage("active-mq");
 					Thread.sleep(10000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
